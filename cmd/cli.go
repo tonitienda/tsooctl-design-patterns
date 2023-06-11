@@ -1,7 +1,15 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"tsoobame/tsooctl/pkg/pods"
+)
 
 func main() {
-	fmt.Println("Hello, world.")
+
+	command := pods.GetPods{}
+
+	result := command.Execute()
+
+	fmt.Println(result.Message)
 }
